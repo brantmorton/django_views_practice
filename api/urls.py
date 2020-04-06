@@ -4,7 +4,7 @@ from .views import ArticleAPIView, ArticleDetails, ArticleViewSet, article_list,
 from rest_framework import routers
 
 router = routers.DefaultRouter()
-router.register('', ArticleViewSet)
+router.register('', ArticleViewSet, basename='viewset')
 
 urlpatterns = [
     path('viewset/', include(router.urls)),
